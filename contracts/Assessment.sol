@@ -28,10 +28,10 @@ contract Assessment {
         // make sure this is the owner
         require(msg.sender == owner, "You are not the owner of this account");
 
-        // perform transaction
+        
         balance += _amount;
 
-        // assert transaction completed successfully
+        
         assert(balance == _previousBalance + _amount);
 
         // emit the event
@@ -52,10 +52,10 @@ contract Assessment {
             });
         }
 
-        // withdraw the given amount
+       
         balance -= _withdrawAmount;
 
-        // assert the balance is correct
+        
         assert(balance == (_previousBalance - _withdrawAmount));
 
         // emit the event
